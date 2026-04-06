@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fourier Travel Italy</title>
+    <link href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Comic+Neue:wght@300;400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+    <div id="root"></div>
+
+    <!-- SVG filter for oil-paint-like effect -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0">
+      <filter id="oilPaint">
+        <!-- subtle noise -->
+        <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" stitchTiles="stitch" result="noise" />
+        <feGaussianBlur stdDeviation="1" in="noise" result="blurNoise" />
+        <!-- displace slightly to create painterly strokes -->
+        <feDisplacementMap in="SourceGraphic" in2="blurNoise" scale="6" xChannelSelector="R" yChannelSelector="G" />
+        <!-- soften and boost colors -->
+        <feColorMatrix type="matrix" values="1.05 0 0 0 0  0 1.03 0 0 0  0 0 1.02 0 0  0 0 0 1 0" />
+      </filter>
+    </svg>

@@ -1,0 +1,48 @@
+{
+  "days": [
+    {
+      "date": "2026-04-09",
+      "title": "04.09 周四 - DAY1 罗马",
+      "places": [
+        {
+          "name": "Rome Termini",
+          "desc": "抵达、Airlink + 火车到 Termini，酒店办理入住",
+          "lat": 41.9010,
+          "lng": 12.5018,
+          "time": "11:05-14:30",
+          "transport": "Airlink + 火车"
+        },
+        {
+          "name": "特雷维喷泉 (Trevi Fountain)",
+          "desc": "步行前往，参观并拍照",
+          "lat": 41.9009,
+          "lng": 12.4833,
+          "time": "16:00",
+          "transport": "步行"
+        }
+      ]
+    },
+    {
+      "date": "2026-04-10",
+      "title": "04.10 周五 - DAY2 罗马",
+      "places": [
+        {
+          "name": "博尔盖塞公园 (Galleria Borghese)",
+          "desc": "上午参观，推荐搭 910 公交或地铁到达",
+          "lat": 41.9142,
+          "lng": 12.4922,
+          "time": "09:00-12:00",
+          "transport": "910 公交"
+        },
+        {
+          "name": "斗兽场 (Colosseum)",
+          "desc": "已买票，参观古罗马广场与周边",
+          "lat": 41.8902,
+          "lng": 12.4922,
+          "time": "14:40",
+          "transport": "步行 / 地铁"
+        }
+      ]
+    }
+  ]
+}
