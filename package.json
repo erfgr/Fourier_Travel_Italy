@@ -1,0 +1,10 @@
+{
+  "name": "fourier-travel-italy-root",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "cd travel-map && npm run dev",
+    "build": "cd travel-map && npm run build",
+    "start": "cd travel-map && npm run preview"
+  }
+}
