@@ -1,5 +1,7 @@
 # Fourier Travel Italy — 项目说明
 
+**在线演示（GitHub Pages）：** https://erfgr.github.io/Fourier_Travel_Italy/
+
 这是一个基于 React + Vite 的轻量原型，使用 Leaflet 在地图上以漫画便签风格展示每日行程：每个景点为编号标记，线路以折线连接，点击标记可查看详情并跳转到 Google Maps。
 
 快速开始
