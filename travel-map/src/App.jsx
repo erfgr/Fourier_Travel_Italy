@@ -11,8 +11,18 @@ export default function App(){
     <div className="app">
       <header className="header">
         <button className="export-btn" onClick={async ()=>{
-          // dynamic import to keep bundle small
-          const [{default: html2canvas}, {jsPDF}] = await Promise.all([import('html2canvas'), import('jspdf')])
+          // dynamic import to keep bundle small — handle different module shapes
+          let html2canvas, jsPDF
+          try{
+            const m1 = await import('html2canvas')
+            html2canvas = m1 && (m1.default || m1)
+          }catch(e){ console.error('html2canvas import failed', e); return alert('需要先安装依赖：html2canvas') }
+          try{
+            const m2 = await import('jspdf')
+            // jspdf may export named `jsPDF` or default; handle both
+            jsPDF = (m2 && (m2.jsPDF || m2.default || m2))
+          }catch(e){ console.error('jspdf import failed', e); return alert('需要先安装依赖：jspdf') }
+
           const appEl = document.querySelector('.app')
           if(!appEl){ return alert('找不到页面内容，无法导出') }
 
