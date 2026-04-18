@@ -39,10 +39,13 @@
       "title": "04.12 周日 - DAY4 佛罗伦萨",
       "city": "Florence",
       "places": [
-        {"name":"圣母百花大教堂 (Duomo)","desc":"大教堂与穹顶，建议登顶俯瞰城市","lat":43.7731015,"lng":11.2565742,"duration_minutes":90,"to_next":{"transport":"步行","duration_minutes":6}},
-        {"name":"乌菲兹美术馆 (Uffizi Gallery)","desc":"必看美术馆，建议提前预约","lat":43.7687,"lng":11.2559,"transport":"步行","duration_minutes":120,"to_next":{"transport":"步行","duration_minutes":8}},
-        {"name":"老桥 (Ponte Vecchio)","desc":"逛街与拍照，周边有皮革店","lat":43.7680255,"lng":11.2531580,"duration_minutes":45,"to_next":{"transport":"公交/步行","duration_minutes":12}},
-        {"name":"米开朗基罗广场 (Piazzale Michelangelo)","desc":"日落观景点，可俯瞰佛罗伦萨全景","lat":43.7629,"lng":11.2654,"duration_minutes":40}
+        {"name":"Social hub Belfiore","desc":"社交点/咖啡休息站","lat":43.7710,"lng":11.2570,"transport":"有轨电车","duration_minutes":20,"to_next":{"transport":"有轨电车","duration_minutes":10}},
+        {"name":"圣母百花大教堂 (Duomo)","desc":"大教堂与穹顶，建议登顶俯瞰城市","lat":43.7731015,"lng":11.2565742,"transport":"步行","duration_minutes":90,"to_next":{"transport":"步行","duration_minutes":8}},
+        {"name":"共和广场 (Piazza della Repubblica)","desc":"市中心广场，适合短暂停留与拍照","lat":43.7713,"lng":11.2556,"transport":"步行","duration_minutes":25,"to_next":{"transport":"步行","duration_minutes":6}},
+        {"name":"Giunti Odeon - Libreria e Cinema","desc":"书店兼电影院，适合浏览与休息","lat":43.7701,"lng":11.2550,"transport":"步行","duration_minutes":30,"to_next":{"transport":"步行","duration_minutes":6}},
+        {"name":"乌菲兹美术馆 (Uffizi Gallery)","desc":"必看美术馆，建议提前预约","lat":43.7687,"lng":11.2559,"transport":"步行","duration_minutes":120,"to_next":{"transport":"步行","duration_minutes":6}},
+        {"name":"老桥 (Ponte Vecchio)","desc":"逛街与拍照，周边有皮革店","lat":43.7680255,"lng":11.2531580,"transport":"步行","duration_minutes":45,"to_next":{"transport":"步行","duration_minutes":20}},
+        {"name":"米开朗基罗广场 (Piazzale Michelangelo)","desc":"日落观景点，可俯瞰佛罗伦萨全景","lat":43.7629,"lng":11.2654,"transport":"步行","duration_minutes":40}
       ]
     },
     {
