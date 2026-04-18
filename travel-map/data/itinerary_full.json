@@ -53,8 +53,7 @@
       "city": "Florence / Transit",
       "places": [
         {"name":"中央广场 (Central Square)","desc":"市中心广场，适合短暂停留与观光","lat":43.7765847,"lng":11.2532087,"transport":"步行","duration_minutes":30,"to_next":{"transport":"步行","duration_minutes":10}},
-        {"name":"圣母百花大教堂 (Duomo)","desc":"参观穹顶与大教堂内部，建议提前安排时间","lat":43.7731015,"lng":11.2565742,"transport":"步行","duration_minutes":90,"to_next":{"transport":"火车","duration_minutes":123}},
-        {"name":"火车：佛罗伦萨 → 威尼斯","desc":"区间移动（参考车次 19:39-21:42）","lat":45.4408,"lng":12.3155,"time":"19:39-21:42","transport":"火车","duration_minutes":123}
+        {"name":"圣母百花大教堂 (Duomo)","desc":"参观穹顶与大教堂内部，建议提前安排时间","lat":43.7731015,"lng":11.2565742,"transport":"步行","duration_minutes":90,"to_next":{"transport":"火车","duration_minutes":123,"time":"19:39-21:42","note":"Train to Venice — keep schedule info here"}}
       ]
     },
     {
