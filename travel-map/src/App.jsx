@@ -79,6 +79,16 @@ export default function App(){
           }
 
           // generate pages for each day
+          // try capture current visible map once to reuse as thumbnail
+          let mapThumbData = null
+          try{
+            const mapEl = document.querySelector('.map-wrap')
+            if(mapEl){
+              const mapCanvas = await html2canvas(mapEl, {useCORS:true, scale:1, backgroundColor: null})
+              mapThumbData = mapCanvas.toDataURL('image/png')
+            }
+          }catch(e){ console.warn('map capture failed, skipping thumbnail', e) }
+
           for(let i=0;i<itinerary.days.length;i++){
             const day = itinerary.days[i]
             const node = renderDayNode(day)
@@ -95,6 +105,17 @@ export default function App(){
               const drawH = imgH * ratio
               if(i>0) pdf.addPage()
               pdf.addImage(imgData, 'JPEG', (pageWidth - drawW)/2, 20, drawW, drawH)
+              // add map thumbnail if available (top-right)
+              if(mapThumbData){
+                const thumbW = 140
+                const thumbH = 100
+                pdf.addImage(mapThumbData, 'PNG', pageWidth - thumbW - 28, 28, thumbW, thumbH)
+              }
+              // footer / page number
+              const footerText = `Page ${i+1} / ${itinerary.days.length}`
+              pdf.setFontSize(10)
+              pdf.setTextColor(80)
+              pdf.text(footerText, pageWidth - 80, pageHeight - 30)
             }catch(e){ console.error('render day failed', e); alert('导出某页失败：' + (e.message||e)) }
             document.body.removeChild(node)
           }
