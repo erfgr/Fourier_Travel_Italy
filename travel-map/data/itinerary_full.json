@@ -61,10 +61,10 @@
       "title": "04.14 周二 - DAY6 威尼斯",
       "city": "Venice",
       "places": [
-        {"name":"威尼斯岛 (Arrival)","desc":"上岛，开始当天行程","lat":45.4408,"lng":12.3155,"transport":"水上巴士","duration_minutes":20,"to_next":{"transport":"步行","duration_minutes":6}},
-        {"name":"圣马可广场 (Piazza San Marco)","desc":"广场与周边观光","lat":45.4342571,"lng":12.3386717,"time":"14:20","duration_minutes":20,"to_next":{"transport":"步行","duration_minutes":10}},
-        {"name":"圣马可大教堂 (St. Mark's Basilica)","desc":"参观教堂（14:40-15:00）","lat":45.4345479,"lng":12.3398218,"time":"14:40-15:00","duration_minutes":20},
-        {"name":"里亚托桥 (Rialto Bridge)","desc":"著名地标，购物与照相点","lat":45.4380507,"lng":12.3359346,"duration_minutes":45}
+        {"name":"Margherita Rossetto（陶瓷店）","desc":"当地陶瓷工艺品店","lat":45.4346,"lng":12.3390,"transport":"步行","duration_minutes":20,"to_next":{"transport":"步行","duration_minutes":5}},
+        {"name":"Ceramiche Benor Maschere（面具店）","desc":"威尼斯传统面具店","lat":45.4345,"lng":12.3392,"transport":"步行","duration_minutes":20,"to_next":{"transport":"步行","duration_minutes":6}},
+        {"name":"圣马可广场 (Piazza San Marco)","desc":"广场与周边观光","lat":45.4342571,"lng":12.3386717,"transport":"步行","duration_minutes":25,"to_next":{"transport":"步行","duration_minutes":10}},
+        {"name":"圣马可大教堂 (St. Mark's Basilica)","desc":"参观教堂与穹顶","lat":45.4345479,"lng":12.3398218,"transport":"步行","duration_minutes":30}
       ]
     },
     {
