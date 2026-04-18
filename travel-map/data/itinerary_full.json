@@ -5,9 +5,9 @@
       "title": "04.09 周四 - DAY1 罗马",
       "city": "Rome",
       "places": [
-        {"name":"Hive Hotel","desc":"入住酒店（Hive Hotel 或同级）","address":"via torino, 6, 00184 roma RM, 意大利","lat":41.9005815,"lng":12.5025272,"transport":"bus","duration_minutes":30,"to_next":{"transport":"bus","duration_minutes":20}},
-        {"name":"Trevi Fountain","desc":"投币祈愿，拍照","lat":41.900977,"lng":12.4832848,"transport":"walk","duration_minutes":30,"to_next":{"transport":"walk","duration_minutes":12}},
-        {"name":"Spanish Steps","desc":"漫步，拍照","lat":41.9059,"lng":12.4823,"transport":"walk","duration_minutes":30}
+        {"name":"Hive Hotel","desc":"入住酒店（Hive Hotel 或同级）","address":"via torino, 6, 00184 roma RM, 意大利","lat":41.9005815,"lng":12.5025272,"transport":"公交车","duration_minutes":30,"to_next":{"transport":"公交车","duration_minutes":20}},
+        {"name":"特雷维喷泉 (Trevi Fountain)","desc":"投币祈愿，拍照","lat":41.900977,"lng":12.4832848,"transport":"步行","duration_minutes":30,"to_next":{"transport":"步行","duration_minutes":12}},
+        {"name":"西班牙广场 (Spanish Steps)","desc":"漫步，拍照","lat":41.9059,"lng":12.4823,"transport":"步行","duration_minutes":30}
       ]
     },
     {
@@ -15,12 +15,12 @@
       "title": "04.10 周五 - DAY2 罗马",
       "city": "Rome",
       "places": [
-        {"name":"Hive Hotel","desc":"同DAY1酒店 — 临时停留或出发点","address":"via torino, 6, 00184 roma RM, 意大利","lat":41.9005815,"lng":12.5025272,"transport":"bus","duration_minutes":20,"to_next":{"transport":"bus","duration_minutes":30}},
-        {"name":"Bocca della Verità (Mouth of Truth)","desc":"位于 Santa Maria in Cosmedin，排队 10-20 分钟，拍照留念","lat":41.8882567,"lng":12.4815441,"transport":"walk","duration_minutes":20,"to_next":{"transport":"walk","duration_minutes":8}},
-        {"name":"Aventine Keyhole","desc":"Aventine Hill 的钥匙孔观景点，排队 1.5-2 小时（高峰时段）","lat":41.8860,"lng":12.4795,"transport":"metro","duration_minutes":20,"to_next":{"transport":"metro","duration_minutes":10}},
-        {"name":"Colosseum","desc":"参观斗兽场；著名拍照打卡机位（建议提前选点取景）","lat":41.8909421,"lng":12.4919030,"transport":"walk","duration_minutes":90,"to_next":{"transport":"walk","duration_minutes":12}},
-        {"name":"Palatine Hill","desc":"古罗马区，连线参观","lat":41.8893064,"lng":12.4871093,"transport":"walk","duration_minutes":60,"to_next":{"transport":"walk","duration_minutes":10}},
-        {"name":"Roman Forum","desc":"古罗马遗址群，推荐与斗兽场和帕拉丁山一并参观","lat":41.892465,"lng":12.485294,"transport":"walk","duration_minutes":60}
+        {"name":"Hive Hotel","desc":"同DAY1酒店 — 临时停留或出发点","address":"via torino, 6, 00184 roma RM, 意大利","lat":41.9005815,"lng":12.5025272,"transport":"公交车","duration_minutes":20,"to_next":{"transport":"公交车","duration_minutes":30}},
+        {"name":"真理之口 (Bocca della Verità)","desc":"位于 Santa Maria in Cosmedin，排队 10-20 分钟，拍照留念","lat":41.8882567,"lng":12.4815441,"transport":"步行","duration_minutes":20,"to_next":{"transport":"步行","duration_minutes":8}},
+        {"name":"一孔三国 (Buco della serratura dell'Ordine di Malta)","desc":"Aventine Hill 的钥匙孔观景点，排队 1.5-2 小时（高峰时段）","lat":41.8860,"lng":12.4795,"transport":"地铁","duration_minutes":20,"to_next":{"transport":"地铁","duration_minutes":10}},
+        {"name":"斗兽场 (Colosseum)","desc":"参观斗兽场；著名拍照打卡机位（建议提前选点取景）","lat":41.8909421,"lng":12.4919030,"transport":"步行","duration_minutes":90,"to_next":{"transport":"步行","duration_minutes":12}},
+        {"name":"帕拉丁山 (Palatine Hill)","desc":"古罗马区，连线参观","lat":41.8893064,"lng":12.4871093,"transport":"步行","duration_minutes":60,"to_next":{"transport":"步行","duration_minutes":10}},
+        {"name":"古罗马广场 (Roman Forum)","desc":"古罗马遗址群，推荐与斗兽场和帕拉丁山一并参观","lat":41.892465,"lng":12.485294,"transport":"步行","duration_minutes":60}
       ]
     },
     {
@@ -28,9 +28,10 @@
       "title": "04.11 周六 - DAY3 梵蒂冈 / 前往佛罗伦萨",
       "city": "Vatican / Transit",
       "places": [
-        {"name":"Vatican Museums","desc":"预约 11:00 入场（已买票）","lat":41.9049610,"lng":12.4546617,"time":"11:00","transport":"metro/bus","duration_minutes":120,"to_next":{"transport":"walk","duration_minutes":12}},
-        {"name":"St. Peter's Basilica","desc":"参观穹顶与教堂内部","lat":41.9021569,"lng":12.4537105,"duration_minutes":60,"to_next":{"transport":"train","duration_minutes":231}},
-        {"name":"Train: Rome → Florence","desc":"区间移动（参考车次 14:55-18:46）","lat":43.7696,"lng":11.2558,"time":"14:55-18:46","transport":"train","duration_minutes":231}
+        {"name":"Hive Hotel","desc":"同DAY1酒店 — 出发点","address":"via torino, 6, 00184 roma RM, 意大利","lat":41.9005815,"lng":12.5025272,"transport":"地铁","duration_minutes":20,"to_next":{"transport":"步行","duration_minutes":20}},
+        {"name":"梵蒂冈博物馆 (Vatican Museums)","desc":"预约 11:00 入场（已买票）","lat":41.9049610,"lng":12.4546617,"time":"11:00","transport":"步行","duration_minutes":120,"to_next":{"transport":"步行","duration_minutes":12}},
+        {"name":"圣彼得大教堂 (St. Peter's Basilica)","desc":"参观穹顶与教堂内部","lat":41.9021569,"lng":12.4537105,"transport":"地铁","duration_minutes":60,"to_next":{"transport":"地铁","duration_minutes":20}},
+        {"name":"罗马 Termini 火车站 (Roma Termini)","desc":"前往火车站搭乘前往目的地的列车","lat":41.9010,"lng":12.5008,"transport":"步行","duration_minutes":20}
       ]
     },
     {
@@ -38,10 +39,10 @@
       "title": "04.12 周日 - DAY4 佛罗伦萨",
       "city": "Florence",
       "places": [
-        {"name":"Duomo (Florence Cathedral)","desc":"大教堂与穹顶，建议登顶俯瞰城市","lat":43.7731015,"lng":11.2565742,"duration_minutes":90,"to_next":{"transport":"walk","duration_minutes":6}},
-        {"name":"Uffizi Gallery","desc":"必看美术馆，建议提前预约","lat":43.7687,"lng":11.2559,"transport":"walk","duration_minutes":120,"to_next":{"transport":"walk","duration_minutes":8}},
-        {"name":"Ponte Vecchio","desc":"逛街与拍照，周边有皮革店","lat":43.7680255,"lng":11.2531580,"duration_minutes":45,"to_next":{"transport":"bus/walk","duration_minutes":12}},
-        {"name":"Piazzale Michelangelo","desc":"日落观景点，可俯瞰佛罗伦萨全景","lat":43.7629,"lng":11.2654,"duration_minutes":40}
+        {"name":"圣母百花大教堂 (Duomo)","desc":"大教堂与穹顶，建议登顶俯瞰城市","lat":43.7731015,"lng":11.2565742,"duration_minutes":90,"to_next":{"transport":"步行","duration_minutes":6}},
+        {"name":"乌菲兹美术馆 (Uffizi Gallery)","desc":"必看美术馆，建议提前预约","lat":43.7687,"lng":11.2559,"transport":"步行","duration_minutes":120,"to_next":{"transport":"步行","duration_minutes":8}},
+        {"name":"老桥 (Ponte Vecchio)","desc":"逛街与拍照，周边有皮革店","lat":43.7680255,"lng":11.2531580,"duration_minutes":45,"to_next":{"transport":"公交/步行","duration_minutes":12}},
+        {"name":"米开朗基罗广场 (Piazzale Michelangelo)","desc":"日落观景点，可俯瞰佛罗伦萨全景","lat":43.7629,"lng":11.2654,"duration_minutes":40}
       ]
     },
     {
@@ -49,9 +50,9 @@
       "title": "04.13 周一 - DAY5 佛罗伦萨 → 威尼斯",
       "city": "Florence / Transit",
       "places": [
-        {"name":"Mercato Centrale","desc":"推荐尝试 Da Nerbone 牛肚包与当地小吃","lat":43.7765847,"lng":11.2532087,"duration_minutes":60,"to_next":{"transport":"walk","duration_minutes":10}},
-        {"name":"Accademia Gallery","desc":"看大卫雕像（建议早去）","lat":43.7761,"lng":11.2586,"duration_minutes":60,"to_next":{"transport":"train","duration_minutes":123}},
-        {"name":"Train: Florence → Venice","desc":"区间移动（参考车次 19:39-21:42）","lat":45.4408,"lng":12.3155,"time":"19:39-21:42","transport":"train","duration_minutes":123}
+        {"name":"中央市场 (Mercato Centrale)","desc":"推荐尝试 Da Nerbone 牛肚包与当地小吃","lat":43.7765847,"lng":11.2532087,"duration_minutes":60,"to_next":{"transport":"步行","duration_minutes":10}},
+        {"name":"学院美术馆 (Accademia)","desc":"看大卫雕像（建议早去）","lat":43.7761,"lng":11.2586,"duration_minutes":60,"to_next":{"transport":"火车","duration_minutes":123}},
+        {"name":"火车：佛罗伦萨 → 威尼斯","desc":"区间移动（参考车次 19:39-21:42）","lat":45.4408,"lng":12.3155,"time":"19:39-21:42","transport":"火车","duration_minutes":123}
       ]
     },
     {
@@ -59,10 +60,10 @@
       "title": "04.14 周二 - DAY6 威尼斯",
       "city": "Venice",
       "places": [
-        {"name":"Venice Arrival","desc":"上岛，开始当天行程","lat":45.4408,"lng":12.3155,"transport":"water bus","duration_minutes":20,"to_next":{"transport":"walk","duration_minutes":6}},
-        {"name":"St. Mark's Square","desc":"广场与周边观光","lat":45.4342571,"lng":12.3386717,"time":"14:20","duration_minutes":20,"to_next":{"transport":"walk","duration_minutes":10}},
-        {"name":"St. Mark's Basilica","desc":"参观教堂（14:40-15:00）","lat":45.4345479,"lng":12.3398218,"time":"14:40-15:00","duration_minutes":20},
-        {"name":"Rialto Bridge","desc":"著名地标，购物与照相点","lat":45.4380507,"lng":12.3359346,"duration_minutes":45}
+        {"name":"威尼斯岛 (Arrival)","desc":"上岛，开始当天行程","lat":45.4408,"lng":12.3155,"transport":"水上巴士","duration_minutes":20,"to_next":{"transport":"步行","duration_minutes":6}},
+        {"name":"圣马可广场 (Piazza San Marco)","desc":"广场与周边观光","lat":45.4342571,"lng":12.3386717,"time":"14:20","duration_minutes":20,"to_next":{"transport":"步行","duration_minutes":10}},
+        {"name":"圣马可大教堂 (St. Mark's Basilica)","desc":"参观教堂（14:40-15:00）","lat":45.4345479,"lng":12.3398218,"time":"14:40-15:00","duration_minutes":20},
+        {"name":"里亚托桥 (Rialto Bridge)","desc":"著名地标，购物与照相点","lat":45.4380507,"lng":12.3359346,"duration_minutes":45}
       ]
     },
     {
@@ -70,7 +71,7 @@
       "title": "04.15 周三 - DAY7 威尼斯 / 离开",
       "city": "Venice / Depart",
       "places": [
-        {"name":"Treviso Airport Transfer","desc":"建议预留交通时间，常见交通：机场巴士或火车","lat":45.6484,"lng":12.1949,"transport":"airport bus / train","duration_minutes":60}
+        {"name":"从威尼斯市中心前往 特雷维索 机场 (Treviso Airport)","desc":"建议预留交通时间，常见交通：机场巴士或火车","lat":45.6484,"lng":12.1949,"transport":"机场巴士 / 火车","duration_minutes":60}
       ]
     }
   ]
