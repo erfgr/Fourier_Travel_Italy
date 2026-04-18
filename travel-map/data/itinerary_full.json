@@ -5,10 +5,9 @@
       "title": "04.09 周四 - DAY1 罗马",
       "city": "Rome",
       "places": [
-        {"name":"Rome Termini","desc":"抵达：Airlink(大巴) + 火车→Termini，酒店办理入住","lat":41.9005815,"lng":12.5025272,"time":"11:05-14:30","transport":"Airlink + 火车","duration_minutes":60,"to_next":{"transport":"公交","duration_minutes":25}},
-        {"name":"西班牙广场 (Spanish Steps)","desc":"漫步，拍照","lat":41.9059,"lng":12.4823,"time":"下午","transport":"公交","duration_minutes":30,"to_next":{"transport":"步行","duration_minutes":10}},
-        {"name":"特雷维喷泉 (Trevi Fountain)","desc":"投币祈愿，拍照","lat":41.900977,"lng":12.4832848,"time":"傍晚","transport":"步行","duration_minutes":30,"to_next":{"transport":"步行","duration_minutes":12}},
-        {"name":"万神殿 (Pantheon)","desc":"古罗马建筑，附近用餐推荐","lat":41.8986,"lng":12.4769,"transport":"步行","duration_minutes":45}
+        {"name":"Hive Hotel","desc":"入住酒店（Hive Hotel 或同级）","address":"via torino, 6, 00184 roma RM, 意大利","lat":41.9005815,"lng":12.5025272,"transport":"公交车","duration_minutes":30,"to_next":{"transport":"公交车","duration_minutes":20}},
+        {"name":"特雷维喷泉 (Trevi Fountain)","desc":"投币祈愿，拍照","lat":41.900977,"lng":12.4832848,"transport":"步行","duration_minutes":30,"to_next":{"transport":"步行","duration_minutes":12}},
+        {"name":"西班牙广场 (Spanish Steps)","desc":"漫步，拍照","lat":41.9059,"lng":12.4823,"transport":"步行","duration_minutes":30}
       ]
     },
     {
