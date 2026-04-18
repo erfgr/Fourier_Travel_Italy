@@ -39,7 +39,6 @@
       "title": "04.12 周日 - DAY4 佛罗伦萨",
       "city": "Florence",
       "places": [
-        {"name":"Social hub Belfiore","desc":"社交点/咖啡休息站","lat":43.7710,"lng":11.2570,"transport":"有轨电车","duration_minutes":20,"to_next":{"transport":"有轨电车","duration_minutes":10}},
         {"name":"圣母百花大教堂 (Duomo)","desc":"大教堂与穹顶，建议登顶俯瞰城市","lat":43.7731015,"lng":11.2565742,"transport":"步行","duration_minutes":90,"to_next":{"transport":"步行","duration_minutes":8}},
         {"name":"共和广场 (Piazza della Repubblica)","desc":"市中心广场，适合短暂停留与拍照","lat":43.7713,"lng":11.2556,"transport":"步行","duration_minutes":25,"to_next":{"transport":"步行","duration_minutes":6}},
         {"name":"Giunti Odeon - Libreria e Cinema","desc":"书店兼电影院，适合浏览与休息","lat":43.7701,"lng":11.2550,"transport":"步行","duration_minutes":30,"to_next":{"transport":"步行","duration_minutes":6}},
