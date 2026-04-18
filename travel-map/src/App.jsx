@@ -10,6 +10,56 @@ export default function App(){
   return (
     <div className="app">
       <header className="header">
+        <button className="export-btn" onClick={async ()=>{
+          // dynamic import to keep bundle small
+          const [{default: html2canvas}, {jsPDF}] = await Promise.all([import('html2canvas'), import('jspdf')])
+          const appEl = document.querySelector('.app')
+          if(!appEl){ return alert('找不到页面内容，无法导出') }
+
+          // clone node and apply background matching .body-bg styles
+          const clone = appEl.cloneNode(true)
+          clone.style.boxSizing = 'border-box'
+          clone.style.width = getComputedStyle(appEl).width
+          clone.style.backgroundImage = "url('/assets/bg-oil.jpg')"
+          clone.style.backgroundSize = 'cover'
+          clone.style.backgroundPosition = 'center'
+          clone.style.backgroundRepeat = 'no-repeat'
+
+          // add overlay similar to .body-bg::after
+          const overlay = document.createElement('div')
+          overlay.style.position = 'absolute'
+          overlay.style.inset = '0'
+          overlay.style.background = 'rgba(8,8,10,0.16)'
+          overlay.style.pointerEvents = 'none'
+          clone.style.position = 'relative'
+          clone.appendChild(overlay)
+
+          // attach offscreen
+          clone.style.position = 'fixed'
+          clone.style.left = '-9999px'
+          document.body.appendChild(clone)
+
+          try{
+            const canvas = await html2canvas(clone, {useCORS:true, scale:2, backgroundColor: null})
+            const imgData = canvas.toDataURL('image/jpeg', 0.95)
+            const pdf = new jsPDF('p','pt','a4')
+            const pageWidth = pdf.internal.pageSize.getWidth()
+            const pageHeight = pdf.internal.pageSize.getHeight()
+            // fit canvas into page while preserving aspect
+            const imgW = canvas.width
+            const imgH = canvas.height
+            const ratio = Math.min(pageWidth / imgW, pageHeight / imgH)
+            const drawW = imgW * ratio
+            const drawH = imgH * ratio
+            pdf.addImage(imgData, 'JPEG', (pageWidth - drawW)/2, 20, drawW, drawH)
+            pdf.save('Fourier_Travel_Itinerary.pdf')
+          }catch(e){
+            console.error(e)
+            alert('导出失败：' + (e.message||e))
+          }finally{
+            document.body.removeChild(clone)
+          }
+        }}>导出为 PDF</button>
         <h1>Fourier Travel Italy</h1>
         <p className="subtitle">点击地图标记查看详细信息，点击“在 Google Maps 打开”跳转</p>
       </header>
