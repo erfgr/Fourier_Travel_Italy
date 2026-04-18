@@ -15,11 +15,11 @@
       "title": "04.10 周五 - DAY2 罗马",
       "city": "Rome",
       "places": [
-        {"name":"博尔盖塞美术馆 (Galleria Borghese)","desc":"上午参观，需预约门票","lat":41.9141133,"lng":12.4921053,"time":"上午","transport":"910 公交 / 地铁","duration_minutes":120,"to_next":{"transport":"地铁/公交","duration_minutes":35}},
-        {"name":"斗兽场 (Colosseum)","desc":"参观斗兽场、帕拉丁山和古罗马广场","lat":41.8909421,"lng":12.4919030,"time":"14:40","transport":"地铁/步行","duration_minutes":90,"to_next":{"transport":"步行","duration_minutes":15}},
-        {"name":"帕拉丁山 (Palatine Hill)","desc":"古罗马区，连线参观","lat":41.8893064,"lng":12.4871093,"duration_minutes":60},
-        {"name":"真理之口 (Bocca della Verità)","desc":"位于 Santa Maria in Cosmedin，拍照留念","lat":41.8882567,"lng":12.4815441,"transport":"步行","duration_minutes":20,"to_next":{"transport":"步行","duration_minutes":8}},
-        {"name":"一孔三国 (Buco della serratura dell'Ordine di Malta)","desc":"Aventine Hill 的钥匙孔观景点","lat":41.8860,"lng":12.4795,"transport":"步行","duration_minutes":15}
+        {"name":"真理之口 (Bocca della Verità)","desc":"位于 Santa Maria in Cosmedin，排队 10-20 分钟，拍照留念","lat":41.8882567,"lng":12.4815441,"transport":"步行","duration_minutes":20,"to_next":{"transport":"步行","duration_minutes":8}},
+        {"name":"一孔三国 (Buco della serratura dell'Ordine di Malta)","desc":"Aventine Hill 的钥匙孔观景点，排队 1.5-2 小时（高峰时段）","lat":41.8860,"lng":12.4795,"transport":"地铁","duration_minutes":20,"to_next":{"transport":"地铁","duration_minutes":10}},
+        {"name":"斗兽场 (Colosseum)","desc":"参观斗兽场；著名拍照打卡机位（建议提前选点取景）","lat":41.8909421,"lng":12.4919030,"transport":"步行","duration_minutes":90,"to_next":{"transport":"步行","duration_minutes":12}},
+        {"name":"帕拉丁山 (Palatine Hill)","desc":"古罗马区，连线参观","lat":41.8893064,"lng":12.4871093,"transport":"步行","duration_minutes":60,"to_next":{"transport":"步行","duration_minutes":10}},
+        {"name":"古罗马广场 (Roman Forum)","desc":"古罗马遗址群，推荐与斗兽场和帕拉丁山一并参观","lat":41.892465,"lng":12.485294,"transport":"步行","duration_minutes":60}
       ]
     },
     {
