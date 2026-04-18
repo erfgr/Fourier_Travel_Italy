@@ -28,7 +28,7 @@
       "title": "04.11 周六 - DAY3 梵蒂冈 / 前往佛罗伦萨",
       "city": "Vatican / Transit",
       "places": [
-        {"name":"Hive Hotel","desc":"同DAY1酒店 — 出发点","address":"via torino, 6, 00184 roma RM, 意大利","lat":41.9005815,"lng":12.5025272,"transport":"地铁","duration_minutes":20,"to_next":{"transport":"步行","duration_minutes":20}},
+        {"name":"Hive Hotel","desc":"同DAY1酒店 — 出发点","address":"via torino, 6, 00184 roma RM, 意大利","lat":41.9005815,"lng":12.5025272,"transport":"地铁","duration_minutes":20,"to_next":{"transport":"地铁","duration_minutes":20}},
         {"name":"梵蒂冈博物馆 (Vatican Museums)","desc":"预约 11:00 入场（已买票）","lat":41.9049610,"lng":12.4546617,"time":"11:00","transport":"步行","duration_minutes":120,"to_next":{"transport":"步行","duration_minutes":12}},
         {"name":"圣彼得大教堂 (St. Peter's Basilica)","desc":"参观穹顶与教堂内部","lat":41.9021569,"lng":12.4537105,"transport":"地铁","duration_minutes":60,"to_next":{"transport":"地铁","duration_minutes":20}},
         {"name":"罗马 Termini 火车站 (Roma Termini)","desc":"前往火车站搭乘前往目的地的列车","lat":41.9010,"lng":12.5008,"transport":"步行","duration_minutes":20}
