@@ -5,7 +5,7 @@
       "title": "04.09 周四 - DAY1 罗马",
       "city": "Rome",
       "places": [
-        {"name":"Hive Hotel","desc":"入住酒店（Hive Hotel 或同级）","address":"via torino, 6, 00184 roma RM, 意大利","lat":41.9005815,"lng":12.5025272,"transport":"公交车","duration_minutes":30,"to_next":{"transport":"公交车","duration_minutes":20}},
+        {"name":"Hive Hotel","desc":"入住酒店（Hive Hotel 或同级）","address":"via torino, 6, 00184 roma RM, 意大利","lat":41.9005815,"lng":12.5025272,"transport":"公交车","duration_minutes":45,"to_next":{"transport":"公交车","duration_minutes":20}},
         {"name":"特雷维喷泉 (Trevi Fountain)","desc":"投币祈愿，拍照","lat":41.900977,"lng":12.4832848,"transport":"步行","duration_minutes":30,"to_next":{"transport":"步行","duration_minutes":12}},
         {"name":"西班牙广场 (Spanish Steps)","desc":"漫步，拍照","lat":41.9059,"lng":12.4823,"transport":"步行","duration_minutes":30}
       ]
@@ -15,9 +15,9 @@
       "title": "04.10 周五 - DAY2 罗马",
       "city": "Rome",
       "places": [
-        {"name":"Hive Hotel","desc":"同DAY1酒店 — 临时停留或出发点","address":"via torino, 6, 00184 roma RM, 意大利","lat":41.9005815,"lng":12.5025272,"transport":"公交车","duration_minutes":20,"to_next":{"transport":"公交车","duration_minutes":30}},
-        {"name":"真理之口 (Bocca della Verità)","desc":"位于 Santa Maria in Cosmedin，排队 10-20 分钟，拍照留念","lat":41.8882567,"lng":12.4815441,"transport":"步行","duration_minutes":20,"to_next":{"transport":"步行","duration_minutes":8}},
-        {"name":"一孔三国 (Buco della serratura dell'Ordine di Malta)","desc":"Aventine Hill 的钥匙孔观景点，排队 1.5-2 小时（高峰时段）","lat":41.8860,"lng":12.4795,"transport":"地铁","duration_minutes":20,"to_next":{"transport":"地铁","duration_minutes":10}},
+        {"name":"Hive Hotel","desc":"同DAY1酒店 — 临时停留或出发点","address":"via torino, 6, 00184 roma RM, 意大利","lat":41.9005815,"lng":12.5025272,"transport":"公交车","duration_minutes":15,"to_next":{"transport":"公交车","duration_minutes":30}},
+        {"name":"真理之口 (Bocca della Verità)","desc":"位于 Santa Maria in Cosmedin，排队 10-20 分钟，拍照留念","lat":41.8882567,"lng":12.4815441,"transport":"步行","duration_minutes":30,"to_next":{"transport":"步行","duration_minutes":8}},
+        {"name":"一孔三国 (Buco della serratura dell'Ordine di Malta)","desc":"Aventine Hill 的钥匙孔观景点，排队 1.5-2 小时（高峰时段）","lat":41.8860,"lng":12.4795,"transport":"地铁","duration_minutes":90,"to_next":{"transport":"地铁","duration_minutes":10}},
         {"name":"斗兽场 (Colosseum)","desc":"参观斗兽场；著名拍照打卡机位（建议提前选点取景）","lat":41.8909421,"lng":12.4919030,"transport":"步行","duration_minutes":90,"to_next":{"transport":"步行","duration_minutes":12}},
         {"name":"帕拉丁山 (Palatine Hill)","desc":"古罗马区，连线参观","lat":41.8893064,"lng":12.4871093,"transport":"步行","duration_minutes":60,"to_next":{"transport":"步行","duration_minutes":10}},
         {"name":"古罗马广场 (Roman Forum)","desc":"古罗马遗址群，推荐与斗兽场和帕拉丁山一并参观","lat":41.892465,"lng":12.485294,"transport":"步行","duration_minutes":60}
@@ -28,10 +28,10 @@
       "title": "04.11 周六 - DAY3 梵蒂冈 / 前往佛罗伦萨",
       "city": "Vatican / Transit",
       "places": [
-        {"name":"Hive Hotel","desc":"同DAY1酒店 — 出发点","address":"via torino, 6, 00184 roma RM, 意大利","lat":41.9005815,"lng":12.5025272,"transport":"地铁","duration_minutes":20,"to_next":{"transport":"地铁","duration_minutes":20}},
+        {"name":"Hive Hotel","desc":"同DAY1酒店 — 出发点","address":"via torino, 6, 00184 roma RM, 意大利","lat":41.9005815,"lng":12.5025272,"transport":"地铁","duration_minutes":15,"to_next":{"transport":"地铁","duration_minutes":20}},
         {"name":"梵蒂冈博物馆 (Vatican Museums)","desc":"预约 11:00 入场（已买票）","lat":41.9049610,"lng":12.4546617,"time":"11:00","transport":"步行","duration_minutes":120,"to_next":{"transport":"步行","duration_minutes":12}},
         {"name":"圣彼得大教堂 (St. Peter's Basilica)","desc":"参观穹顶与教堂内部","lat":41.9021569,"lng":12.4537105,"transport":"地铁","duration_minutes":60,"to_next":{"transport":"地铁","duration_minutes":20}},
-        {"name":"罗马 Termini 火车站 (Roma Termini)","desc":"前往火车站搭乘前往目的地的列车","lat":41.9010,"lng":12.5008,"transport":"步行","duration_minutes":20}
+        {"name":"罗马 Termini 火车站 (Roma Termini)","desc":"前往火车站搭乘前往目的地的列车","lat":41.9010,"lng":12.5008,"transport":"步行","duration_minutes":30}
       ]
     },
     {
