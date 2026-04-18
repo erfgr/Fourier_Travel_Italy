@@ -15,6 +15,7 @@
       "title": "04.10 周五 - DAY2 罗马",
       "city": "Rome",
       "places": [
+        {"name":"Hive Hotel","desc":"同DAY1酒店 — 临时停留或出发点","address":"via torino, 6, 00184 roma RM, 意大利","lat":41.9005815,"lng":12.5025272,"transport":"公交车","duration_minutes":20,"to_next":{"transport":"公交车","duration_minutes":30}},
         {"name":"真理之口 (Bocca della Verità)","desc":"位于 Santa Maria in Cosmedin，排队 10-20 分钟，拍照留念","lat":41.8882567,"lng":12.4815441,"transport":"步行","duration_minutes":20,"to_next":{"transport":"步行","duration_minutes":8}},
         {"name":"一孔三国 (Buco della serratura dell'Ordine di Malta)","desc":"Aventine Hill 的钥匙孔观景点，排队 1.5-2 小时（高峰时段）","lat":41.8860,"lng":12.4795,"transport":"地铁","duration_minutes":20,"to_next":{"transport":"地铁","duration_minutes":10}},
         {"name":"斗兽场 (Colosseum)","desc":"参观斗兽场；著名拍照打卡机位（建议提前选点取景）","lat":41.8909421,"lng":12.4919030,"transport":"步行","duration_minutes":90,"to_next":{"transport":"步行","duration_minutes":12}},
