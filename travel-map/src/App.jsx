@@ -11,64 +11,95 @@ export default function App(){
     <div className="app">
       <header className="header">
         <button className="export-btn" onClick={async ()=>{
-          // dynamic import to keep bundle small — handle different module shapes
+          // export per-day PDF pages using html2canvas + jsPDF
           let html2canvas, jsPDF
-          try{
-            const m1 = await import('html2canvas')
-            html2canvas = m1 && (m1.default || m1)
-          }catch(e){ console.error('html2canvas import failed', e); return alert('需要先安装依赖：html2canvas') }
-          try{
-            const m2 = await import('jspdf')
-            // jspdf may export named `jsPDF` or default; handle both
-            jsPDF = (m2 && (m2.jsPDF || m2.default || m2))
-          }catch(e){ console.error('jspdf import failed', e); return alert('需要先安装依赖：jspdf') }
+          try{ const m1 = await import('html2canvas'); html2canvas = m1 && (m1.default || m1) }catch(e){ console.error(e); return alert('缺少依赖 html2canvas，请运行 npm install') }
+          try{ const m2 = await import('jspdf'); jsPDF = (m2 && (m2.jsPDF || m2.default || m2)) }catch(e){ console.error(e); return alert('缺少依赖 jspdf，请运行 npm install') }
 
-          const appEl = document.querySelector('.app')
-          if(!appEl){ return alert('找不到页面内容，无法导出') }
+          const pdf = new jsPDF('p','pt','a4')
+          const pageWidth = pdf.internal.pageSize.getWidth()
+          const pageHeight = pdf.internal.pageSize.getHeight()
 
-          // clone node and apply background matching .body-bg styles
-          const clone = appEl.cloneNode(true)
-          clone.style.boxSizing = 'border-box'
-          clone.style.width = getComputedStyle(appEl).width
-          clone.style.backgroundImage = "url('/assets/bg-oil.jpg')"
-          clone.style.backgroundSize = 'cover'
-          clone.style.backgroundPosition = 'center'
-          clone.style.backgroundRepeat = 'no-repeat'
+          // helper to render a day layout into a temporary DOM node
+          const renderDayNode = (day)=>{
+            const wrap = document.createElement('div')
+            wrap.style.boxSizing = 'border-box'
+            wrap.style.width = '1024px'
+            wrap.style.padding = '28px'
+            wrap.style.fontFamily = getComputedStyle(document.body).fontFamily || 'sans-serif'
+            wrap.style.backgroundImage = "url('/assets/bg-oil.jpg')"
+            wrap.style.backgroundSize = 'cover'
+            wrap.style.backgroundPosition = 'center'
+            wrap.style.position = 'relative'
 
-          // add overlay similar to .body-bg::after
-          const overlay = document.createElement('div')
-          overlay.style.position = 'absolute'
-          overlay.style.inset = '0'
-          overlay.style.background = 'rgba(8,8,10,0.16)'
-          overlay.style.pointerEvents = 'none'
-          clone.style.position = 'relative'
-          clone.appendChild(overlay)
+            const overlay = document.createElement('div')
+            overlay.style.position = 'absolute'
+            overlay.style.inset = '0'
+            overlay.style.background = 'rgba(8,8,10,0.12)'
+            overlay.style.pointerEvents = 'none'
+            wrap.appendChild(overlay)
 
-          // attach offscreen
-          clone.style.position = 'fixed'
-          clone.style.left = '-9999px'
-          document.body.appendChild(clone)
+            const container = document.createElement('div')
+            container.style.position = 'relative'
+            container.style.zIndex = '2'
+            container.style.color = '#0f1720'
 
-          try{
-            const canvas = await html2canvas(clone, {useCORS:true, scale:2, backgroundColor: null})
-            const imgData = canvas.toDataURL('image/jpeg', 0.95)
-            const pdf = new jsPDF('p','pt','a4')
-            const pageWidth = pdf.internal.pageSize.getWidth()
-            const pageHeight = pdf.internal.pageSize.getHeight()
-            // fit canvas into page while preserving aspect
-            const imgW = canvas.width
-            const imgH = canvas.height
-            const ratio = Math.min(pageWidth / imgW, pageHeight / imgH)
-            const drawW = imgW * ratio
-            const drawH = imgH * ratio
-            pdf.addImage(imgData, 'JPEG', (pageWidth - drawW)/2, 20, drawW, drawH)
-            pdf.save('Fourier_Travel_Itinerary.pdf')
-          }catch(e){
-            console.error(e)
-            alert('导出失败：' + (e.message||e))
-          }finally{
-            document.body.removeChild(clone)
+            const h = document.createElement('h2')
+            h.textContent = `${day.title || ''}`
+            h.style.color = 'var(--accent)'
+            h.style.margin = '6px 0 12px'
+            container.appendChild(h)
+
+            for(const p of day.places){
+              const item = document.createElement('div')
+              item.style.marginBottom = '10px'
+              const name = document.createElement('div')
+              name.textContent = p.name
+              name.style.fontWeight = '800'
+              name.style.marginBottom = '4px'
+              const desc = document.createElement('div')
+              desc.textContent = p.desc || ''
+              desc.style.marginBottom = '4px'
+              const meta = document.createElement('div')
+              meta.style.fontSize = '13px'
+              meta.style.opacity = '0.9'
+              const parts = []
+              if(p.time) parts.push(`时间: ${p.time}`)
+              if(p.duration_minutes !== undefined) parts.push(`预计停留: ${p.duration_minutes} 分钟`)
+              if(p.transport) parts.push(`交通: ${p.transport}`)
+              meta.textContent = parts.join(' · ')
+              item.appendChild(name)
+              item.appendChild(desc)
+              item.appendChild(meta)
+              container.appendChild(item)
+            }
+
+            wrap.appendChild(container)
+            return wrap
           }
+
+          // generate pages for each day
+          for(let i=0;i<itinerary.days.length;i++){
+            const day = itinerary.days[i]
+            const node = renderDayNode(day)
+            node.style.position = 'fixed'
+            node.style.left = '-9999px'
+            document.body.appendChild(node)
+            try{
+              const canvas = await html2canvas(node, {useCORS:true, scale:2, backgroundColor: null})
+              const imgData = canvas.toDataURL('image/jpeg', 0.95)
+              const imgW = canvas.width
+              const imgH = canvas.height
+              const ratio = Math.min(pageWidth / imgW, pageHeight / imgH)
+              const drawW = imgW * ratio
+              const drawH = imgH * ratio
+              if(i>0) pdf.addPage()
+              pdf.addImage(imgData, 'JPEG', (pageWidth - drawW)/2, 20, drawW, drawH)
+            }catch(e){ console.error('render day failed', e); alert('导出某页失败：' + (e.message||e)) }
+            document.body.removeChild(node)
+          }
+
+          pdf.save('Fourier_Travel_Itinerary.pdf')
         }}>导出为 PDF</button>
         <h1>Fourier Travel Italy</h1>
         <p className="subtitle">点击地图标记查看详细信息，点击“在 Google Maps 打开”跳转</p>
